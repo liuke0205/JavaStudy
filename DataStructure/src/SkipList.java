@@ -1,5 +1,3 @@
-package MySkipList;
-
 import java.util.Random;
 
 class SkipNode<T>{

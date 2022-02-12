@@ -1,15 +1,27 @@
-package MyLRU;
 import java.util.HashMap;
 import java.util.Map;
 
+public class LRU{
+    public static void main(String[] args) {
+        LRUCache lruCache = new LRUCache(5);
+        for (int i = 0; i <= 6; i++) {
+            lruCache.put(i, i);
+        }
+        lruCache.printList();
+        lruCache.get(2);
+        lruCache.printList();
+        lruCache.get(3);
+        lruCache.printList();
+    }
+}
 
-public class LRU {
+class LRUCache {
     //双向链表的最大容量
     int capcity;
     Map<Integer, Node> cache;
     DoubleList list;
 
-    public LRU(int capcity) {
+    public LRUCache(int capcity) {
         this.capcity = capcity;
         cache = new HashMap<>(this.capcity);
         list = new DoubleList();
