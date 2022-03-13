@@ -13,9 +13,9 @@ public class Topology {
         int[][] graph = new int[numCourses][numCourses];
         int[] indeg = new int[numCourses];
         // 构造邻接矩阵
-        for (int i = 0; i < prerequisites.length; i++) {
-            int form = prerequisites[i][0];
-            int to = prerequisites[i][1];
+        for (int[] prerequisite : prerequisites) {
+            int form = prerequisite[0];
+            int to = prerequisite[1];
             graph[form][to] = 1;
             indeg[to]++;
         }
