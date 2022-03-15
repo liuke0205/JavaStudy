@@ -3,6 +3,7 @@ package Lock;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
+import java.util.PriorityQueue;
 import java.util.concurrent.locks.ReentrantLock;
 
 class Lock {
@@ -21,6 +22,16 @@ class Lock {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> heap = new PriorityQueue<>();
+        for(int n : nums){
+            heap.add(n);
+            if(heap.size() > k){
+                heap.poll();
+            }
+        }
+        return heap.peek();
     }
 
     public void lock(){
