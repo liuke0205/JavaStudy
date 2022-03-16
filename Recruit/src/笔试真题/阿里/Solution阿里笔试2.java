@@ -1,4 +1,4 @@
-package 笔试真题;
+package 笔试真题.阿里;
 
 import java.util.Scanner;
 

@@ -41,7 +41,7 @@ public class Dijkstra {
         Arrays.fill(distTo, Integer.MAX_VALUE);
         distTo[start] = 0;
         // 优先级队列，distFromStart 较小的排在前面
-        Queue<State> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.distFromStart));
+        Queue<State> pq = new PriorityQueue<State>(Comparator.comparingInt(a -> a.distFromStart));
         pq.add(new State(start, 0));
         while(!pq.isEmpty()){
             State cur = pq.poll();
