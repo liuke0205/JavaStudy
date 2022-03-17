@@ -1,5 +1,6 @@
 package 笔试真题.美团;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 /**
@@ -25,10 +26,15 @@ public class Solution_避开炸弹 {
         for (int i = 0; i < m; i++) {
             arr[i] = scanner.nextInt();
         }
-        System.out.println(fun(arr));
-    }
-
-    private static boolean fun(int[] arr) {
-        return false;
+        HashSet<Integer> set = new HashSet<>();
+        int res = 0;
+        for (int i = 0; i < arr.length; i++) {
+            set.add(arr[i]);
+            if (set.size() == n){
+                res++;
+                set.clear();
+            }
+        }
+        System.out.println(res);
     }
 }

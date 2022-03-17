@@ -1,5 +1,6 @@
 package 面试真题.阿里;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**
@@ -16,7 +17,6 @@ import java.util.PriorityQueue;
  *      iterator 1返回：1 3 4 6 7 8
  *      iterator 2返回：2 5 9 10
  *      那么这个类返回的元素序列为： 1 2 3 4 5 6 7 8 9 10
- *
  * 实现限制：
  * 1. 你能使用的内存必须和元素的个数无关。即即使元素的个数是无穷多个，你的程序也应该只需要很小的内存就可以运行。
  * 2. 不能对这个类的使用者作假定。比方说不能假定moveNext()和getCurrentElement()一定是成对调用的。
@@ -30,9 +30,9 @@ class TotalOrderIterator<T extends Comparable<T>> implements Iterator<T> {
     private Iterator<T>[] iterators;
     private int valiad;
     PriorityQueue<Iterator<T>> heap = new PriorityQueue<>(
-//        (a, b) -> {
-//            return a.getCurrentElement() - b.getCurrentElement();
-//        }
+        (a, b) -> {
+            return a.getCurrentElement().compareTo(b.getCurrentElement());
+        }
     );
 
     public TotalOrderIterator(Iterator<T>[] iterators) {
@@ -42,35 +42,39 @@ class TotalOrderIterator<T extends Comparable<T>> implements Iterator<T> {
             valiad++;
         }
     }
+
+    @Override
     public T getCurrentElement() {
         Iterator<T> curIterator = heap.peek();
         assert curIterator != null;
         return curIterator.getCurrentElement();
     }
+
+    @Override
     public boolean moveNext() {
         Iterator<T> curIterator = heap.peek();
         assert curIterator != null;
         if(!curIterator.moveNext()){
-            heap.poll();
             valiad--;
         }
         return valiad > 0;
     }
 }
 
-/** Iterator 表示了一个元素序列。 这个元素序列在什么位置，以及如何存储都是未知的。*
- * * 这个元素序列可能非常非常长，有几十亿个元素，或者可能是无穷无尽的。
+/**
+ * Iterator 表示了一个元素序列。 这个元素序列在什么位置，以及如何存储都是未知的。*
+ * 这个元素序列可能非常非常长，有几十亿个元素，或者可能是无穷无尽的。
  * */
 interface Iterator<T extends Comparable<T>> {
 
     /** 返回当前游标位置的元素*
      *  @return 当前游标位置的元素*
      * */
-    public T getCurrentElement();
+    T getCurrentElement();
 
     /** 游标移动到下一个元素。*
-     * 注意：Iterator在初始时游标位于第一个元素之前！！！！*
-     * @return 移动到合法游标位置，返回true, 否则返回false*
+     *  注意：Iterator在初始时游标位于第一个元素之前！！！！*
+     *  @return 移动到合法游标位置，返回true, 否则返回false*
      **/
-    public boolean moveNext();
+     boolean moveNext();
 }

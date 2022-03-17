@@ -1,5 +1,6 @@
 package 笔试真题.美团;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 /**
@@ -19,21 +20,39 @@ public class Solution_点菜 {
      * 2 3
      * 3 4
      */
+    static int max = 0;
+    static boolean[] visited;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int m = scanner.nextInt();
 
-        int[][] arr = new int[n][m];
+        int[][] arr = new int[n][2];
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+            for (int j = 0; j < 2; j++) {
                 arr[i][j] = scanner.nextInt();
             }
         }
-        System.out.println(fun(arr));
+        visited = new boolean[m + 1];
+        backtracking(arr, 0, 0);
+        System.out.println(max);
     }
 
-    private static boolean fun(int[][] arr) {
-        return false;
+    private static void backtracking(int[][] arr, int index, int count) {
+        if (index == arr.length){
+            max = Math.max(max, count);
+            return;
+        }
+
+        for (int i = index; i < arr.length; i++) {
+            if (!visited[arr[i][0]] && !visited[arr[i][1]]){
+                visited[arr[i][0]] = true;
+                visited[arr[i][1]] = true;
+                backtracking(arr, i + 1, count++);
+                visited[arr[i][0]] = false;
+                visited[arr[i][1]] = false;
+            }
+        }
     }
+
 }
