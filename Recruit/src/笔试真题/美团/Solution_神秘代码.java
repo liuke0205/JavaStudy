@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author liuke
  * @date 2022/3/19 10:01
  */
-public interface Solution_神秘代码 {
+public class Solution_神秘代码 {
     /**
      * 第二題：神秘代码！！！！！！！！！！！！！！
      * @param args
@@ -65,7 +65,7 @@ public interface Solution_神秘代码 {
     /**
      * 解密过程
      * @param str
-     * @return 解密结果    没问题，，  加密还有点问题
+     * @return 解密结果
      */
     static String decrypt(String str) {
         StringBuilder sb = new StringBuilder();

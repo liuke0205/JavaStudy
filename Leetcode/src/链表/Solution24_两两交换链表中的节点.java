@@ -6,7 +6,7 @@ import java.util.List;
  * @author liuke
  * @date 2022/3/3 22:07
  */
-public class Solution_24 {
+public class Solution24_两两交换链表中的节点 {
     public ListNode swapPairs(ListNode head) {
         if(head == null || head.next == null){
             return head;

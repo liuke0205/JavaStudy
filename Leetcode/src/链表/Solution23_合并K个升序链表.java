@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
  * @author liuke
  * @date 2022/3/6 10:45
  */
-public class Solution_23 {
+public class Solution23_合并K个升序链表 {
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists.length == 0){
             return null;

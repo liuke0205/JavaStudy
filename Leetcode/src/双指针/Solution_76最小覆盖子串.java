@@ -6,7 +6,7 @@ import java.util.HashMap;
  * @author liuke
  * @date 2022/2/27 12:05
  */
-public class Solution_76 {
+public class Solution_76最小覆盖子串 {
     // https://leetcode-cn.com/problems/minimum-window-substring/
     // 76 最小覆盖子串
     // 解决方案：使用滑动窗口
