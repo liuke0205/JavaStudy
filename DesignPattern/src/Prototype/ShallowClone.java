@@ -7,7 +7,7 @@ package Prototype;
 public class ShallowClone implements Cloneable{
     String version;
     User user;
-    public ShallowClone(String version, User user){
+    public ShallowClone(User user,String version){
         this.user = user;
         this.version = version;
     }

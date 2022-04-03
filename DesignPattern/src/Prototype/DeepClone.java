@@ -7,7 +7,7 @@ package Prototype;
 public class DeepClone implements Cloneable{
     String version;
     User user;
-    public DeepClone(String version, User user){
+    public DeepClone(User user, String version){
         this.user = user;
         this.version = version;
     }
