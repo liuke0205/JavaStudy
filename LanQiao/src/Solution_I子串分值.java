@@ -1,5 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**
@@ -12,35 +10,28 @@ public class Solution_I子串分值 {
         String s = scanner.nextLine();
         int cnt  = 0;
         for (int k = 0; k < s.length(); k++) {
-            HashMap<Character, Integer> map = new HashMap<>();
-            int i = 0, j = k;
-            for (int l = i; l <= j; l++) {
-                map.put(s.charAt(l), map.getOrDefault(s.charAt(l), 0) + 1);
-            }
-            int num = 0;
-            for (Map.Entry<Character, Integer> entry: map.entrySet()){
-                if (entry.getValue() == 1){
-                    num++;
+            char c = s.charAt(k);
+            int i = k - 1;
+            while (i >= 0){
+                if (c != s.charAt(i)){
+                    i--;
+                }else {
+                    break;
                 }
             }
-            cnt += num;
-            while (++j < s.length()){
-                char c1 = s.charAt(i++);
-                char c2 = s.charAt(j);
-                map.put(c1, map.getOrDefault(c1, 0) - 1);
-                map.put(c1, map.getOrDefault(c2, 0) + 1);
-                if (map.getOrDefault(c1, 0) == 1){
-                    cnt++;
-                }else if (map.getOrDefault(c1, 0) == 0){
-                    cnt--;
-                }
-                if (map.getOrDefault(c2, 0) == 1){
-                    cnt++;
-                }else if (map.getOrDefault(c2, 0) == 2){
-                    cnt--;
+            int leftNum = k - i;
+
+            int j = k + 1;
+            while (j <= s.length() - 1){
+                if (c != s.charAt(j)){
+                    j++;
+                }else {
+                    break;
                 }
             }
-            map.clear();
+            int rightNum = j - k;
+
+            cnt += leftNum * rightNum;
         }
         System.out.println(cnt);
     }
