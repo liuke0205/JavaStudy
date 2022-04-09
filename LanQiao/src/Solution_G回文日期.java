@@ -4,7 +4,7 @@ import java.util.Scanner;
  * @author liuke
  * @date 2022/4/5 13:16
  */
-public class Solution_G回文日期 {
+public class  Solution_G回文日期 {
     static boolean isFlag1, isFlag2;
     static int[] month = new int[]{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
