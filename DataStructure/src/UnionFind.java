@@ -1,3 +1,6 @@
+/**
+ * https://labuladong.gitee.io/algo/2/20/51/
+ */
 public class UnionFind {
     // 连通分量个数
     private int count;
