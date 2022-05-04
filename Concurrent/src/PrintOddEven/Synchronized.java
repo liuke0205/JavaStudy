@@ -13,7 +13,8 @@ public class Synchronized {
                 while (num < 100){
                     synchronized (object) {
                         if (num % 2 == 0) {
-                        System.out.println(Thread.currentThread().getName() + ":" + num++);
+                        System.out.println(Thread.currentThread().getName() +
+                                ":" + num++);
                     }
                 }
 
@@ -24,7 +25,8 @@ public class Synchronized {
             while (num < 100){
                 synchronized (object) {
                     if (num % 2 == 1) {
-                        System.out.println(Thread.currentThread().getName() + ":" + num++);
+                        System.out.println(Thread.currentThread().getName() +
+                                ":" + num++);
                     }
                 }
             }

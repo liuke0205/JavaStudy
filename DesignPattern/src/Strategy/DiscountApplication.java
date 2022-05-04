@@ -6,8 +6,15 @@ package Strategy;
  */
 public class DiscountApplication {
     public static void main(String[] args) {
-        DiscountStrategy discountStrategy = DiscountStrategyFactory.chooseStrategy("1");
-        Double discount = discountStrategy.discount(200D);
-        System.out.println(discount);
+        Context context = new Context(new Discount85Strategy());
+        System.out.println(context.exec(100));
     }
+    /**
+     *
+     * 1. 单点登录相关问题扩展+整理
+     * 2. 用户故事补充
+     * 3. 技术栈部分 每个技术对应的功能
+     * 4. 通用问题回答
+     *
+     */
 }

@@ -14,7 +14,7 @@ import org.apache.rocketmq.remoting.exception.RemotingException;
  *  生产者异步发送消息
  */
 public class AsyncProducer {
-    public static void main(String[] args) throws MQClientException, MQBrokerException, RemotingException, InterruptedException {
+    public static void main(String[] args) throws MQClientException, RemotingException, InterruptedException {
         // 创建一个生产者，参数为生产者的Group名称
         DefaultMQProducer producer = new DefaultMQProducer("pg");
         // 指定NameServer地址
@@ -22,11 +22,9 @@ public class AsyncProducer {
         // 指定新创建的Topic的queue数量，默认为4
         producer.setDefaultTopicQueueNums(2);
         producer.start();
-
         for (int i = 0; i < 100; i++) {
-            byte[] bytes = ("Hi" + i).getBytes();
-
-            Message message = new Message("myTopicA", "myTag", bytes);
+            byte[] bytes = ("task_id:{" + 1001 + "},text:{东北大学位于辽宁省沈阳市！}").getBytes();
+            Message message = new Message("NER", "task", bytes);
             producer.send(message, new SendCallback() {
                 @Override
                 public void onSuccess(SendResult sendResult) {

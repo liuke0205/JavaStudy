@@ -1,51 +1,33 @@
-class MyCircularQueue {
-    int front;//front指向队首前一个
-    int rear;//rear指向队尾元素
-    int maxCapacity;
-    int[] data;
-    public MyCircularQueue(int k) {
-        this.maxCapacity = k + 1;
-        front = 0;
-        rear = 0;
-        data = new int[this.maxCapacity];
+
+class CircularQueue {
+    // 数组：items，数组大小：n
+    private String[] items;
+    private int n = 0;
+    // head 表示队头下标，tail 表示队尾下标
+    private int head = 0;
+    private int tail = 0;
+
+    // 申请一个大小为 capacity 的数组
+    public CircularQueue(int capacity) {
+        items = new String[capacity];
+        n = capacity;
     }
 
-    public boolean enQueue(int value) {
-        if(isFull()){
-            return false;
-        }
-        rear = (rear + 1) % maxCapacity;
-        data[rear] = value;
+    // 入队
+    public boolean enqueue(String item) {
+        // 队列满了
+        if ((tail + 1) % n == head) return false;
+        items[tail] = item;
+        tail = (tail + 1) % n;
         return true;
     }
 
-    public boolean deQueue() {
-        if(isEmpty()){
-            return false;
-        }
-        front = (front + 1) % maxCapacity;
-        return true;
-    }
-
-    public int Front() {
-        if(isEmpty()){
-            return -1;
-        }
-        return data[(front + 1) % maxCapacity];
-    }
-
-    public int Rear() {
-        if(isEmpty()){
-            return -1;
-        }
-        return data[rear];
-    }
-
-    public boolean isEmpty() {
-        return rear == front;
-    }
-
-    public boolean isFull() {
-        return (rear + 1) % maxCapacity == front;
+    // 出队
+    public String dequeue() {
+        // 如果 head == tail 表示队列为空
+        if (head == tail) return null;
+        String ret = items[head];
+        head = (head + 1) % n;
+        return ret;
     }
 }
