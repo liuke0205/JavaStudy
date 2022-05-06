@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/3/5 17:50
  */
-public class Solution_123 {
+public class Solution_123买卖股票的最佳时机III {
     public int maxProfit(int[] prices) {
         //1. dp[i][j] j=0代表没有状态； j=1代表第一次买入； j=2代表第一次卖出；j=3代表第二次买入；j=4代表第二次卖出
         /*

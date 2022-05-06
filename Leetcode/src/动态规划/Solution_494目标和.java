@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/23 22:39
  */
-public class Solution_494 {
+public class Solution_494目标和 {
     public int findTargetSumWays(int[] nums, int target) {
         int sum = 0;
         for (Integer num: nums) {

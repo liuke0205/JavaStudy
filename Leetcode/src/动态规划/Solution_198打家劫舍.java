@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/3/4 23:36
  */
-public class Solution_198 {
+public class Solution_198打家劫舍 {
     public int rob(int[] nums) {
         // 1.dp[i]代表投前i个房屋获得的最大价值
         // 2.公式：dp[i] = max(dp[i-2] + nums[i], dp[i-1]);

@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/3/5 17:50
  */
-public class Solution_188 {
+public class Solution_188买卖股票的最佳时机IV {
     public int maxProfit(int k, int[] prices) {
         if (prices.length == 0) return 0;
 

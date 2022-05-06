@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/20 21:28
  */
-public class Solution_63 {
+public class Solution_63不同路径II {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         int m = obstacleGrid.length;
         int n = obstacleGrid[0].length;

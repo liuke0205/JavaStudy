@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/3/4 23:52
  */
-public class Solution_213 {
+public class Solution_213打家劫舍II {
     public int rob(int[] nums) {
         return Math.max(rob(nums, 1, nums.length - 1), rob(nums, 0, nums.length-2));
     }

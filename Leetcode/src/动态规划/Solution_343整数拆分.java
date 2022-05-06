@@ -6,7 +6,7 @@ import java.util.Map;
  * @author liuke
  * @date 2022/2/20 21:42
  */
-public class Solution_343 {
+public class Solution_343整数拆分 {
     public int integerBreak(int n) {
         int[] dp = new int[n + 1];
         dp[2] = 1;

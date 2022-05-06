@@ -25,7 +25,7 @@ class TreeNode {
     }
 }
 
-public class Solution_337 {
+class Solution_337 {
     public int rob(TreeNode root) {
         int[] res = dp(root);
         return Math.max(res[0], res[1]);

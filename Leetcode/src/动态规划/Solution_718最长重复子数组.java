@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/28 22:43
  */
-public class Solution_718 {
+public class Solution_718最长重复子数组 {
     public int findLength(int[] nums1, int[] nums2) {
         int len1 = nums1.length, len2 = nums2.length;
         int[][] dp = new int[len1 + 1][len2 + 1];

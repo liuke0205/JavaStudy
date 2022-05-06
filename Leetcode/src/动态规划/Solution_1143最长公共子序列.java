@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/16 23:49
  */
-public class Solution_1143 {
+public class Solution_1143最长公共子序列 {
     public int longestCommonSubsequence(String text1, String text2) {
         // dp[i][j] 代表text1[0..i] 和 text2[0...j] 的最长公共自序列
         // base case

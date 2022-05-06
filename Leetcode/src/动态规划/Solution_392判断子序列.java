@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/28 22:46
  */
-public class Solution_392 {
+public class Solution_392判断子序列 {
     public boolean isSubsequence(String s, String t) {
         int len1 = s.length(), len2 = t.length();
         int[][] dp = new int[len1 + 1][len2 + 1];

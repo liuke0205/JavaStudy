@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/28 22:53
  */
-public class Solution_115 {
+public class Solution_115不同的子序列 {
     public int numDistinct(String s, String t) {
         // 1.dp[i][j] 表示 s[0...i] 中出现 t[0...j]的次数
         // 2.dp[i][j] = (s[i] == t[j]) ? (dp[i-1][j-1] + dp[i-1][j]) : dp[i-1][j];

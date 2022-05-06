@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author liuke
  * @date 2022/2/28 22:44
  */
-public class Solution_674 {
+public class Solution_674最长连续递增子序列 {
     public int findLengthOfLCIS(int[] nums) {
         int len = nums.length;
         int[] dp = new int[len];

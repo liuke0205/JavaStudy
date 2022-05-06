@@ -6,7 +6,7 @@ import com.sun.scenario.animation.shared.ClipEnvelope;
  * @author liuke
  * @date 2022/3/3 23:10
  */
-public class Solution_516 {
+public class Solution_516最长回文子序列 {
     // 力扣516 https://leetcode-cn.com/problems/longest-palindromic-subsequence/
     public int longestPalindromeSubseq(String s) {
         // 1. dp[i][j]代表 s[i...j]的最长回文串

@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/23 22:55
  */
-public class Solution_518 {
+public class Solution_518零钱兑换II {
     public int change(int amount, int[] coins) {
         //1. dp[j] 代表组合成j的组合数
         //2. dp[j] += dp[j- coins[i]]

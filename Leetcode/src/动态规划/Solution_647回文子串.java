@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/3/3 23:32
  */
-public class Solution_647 {
+public class Solution_647回文子串 {
     //力扣647 https://leetcode-cn.com/problems/palindromic-substrings/
     public int countSubstrings(String s) {
         // 1. dp[i][j] 代表s[i..j]是否为回文串

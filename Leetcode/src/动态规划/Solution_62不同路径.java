@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/20 21:28
  */
-public class Solution_62 {
+public class Solution_62不同路径 {
     public int uniquePaths(int m, int n) {
         int[][] dp = new int[m][n];
         for (int i = 0; i < m; i++) {

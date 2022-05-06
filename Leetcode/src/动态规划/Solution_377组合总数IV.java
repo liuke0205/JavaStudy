@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/24 22:24
  */
-public class Solution_377 {
+public class Solution_377组合总数IV {
     public int combinationSum4(int[] nums, int target) {
         // 1.dp[j] 代表组合成j的组合数有dp[j]种
         // 2.公式 dp[j] += dp[j - nums[i]]

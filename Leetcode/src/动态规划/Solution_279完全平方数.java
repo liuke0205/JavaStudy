@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @author liuke
  * @date 2022/2/24 23:17
  */
-public class Solution_279 {
+public class Solution_279完全平方数 {
 
     public int numSquares(int n) {
         // 1.dp[j] 代表 j的完全平方数的最少数量是dp[j]

@@ -2,7 +2,7 @@ package 动态规划;
 
 import java.util.Arrays;
 
-public class Solution_300 {
+public class Solution_300最长递增子序列 {
     public int lengthOfLIS(int[] nums) {
         //base case dp[] = 1
         //dp[i] 代表以nums[0...i]的最长递增序列

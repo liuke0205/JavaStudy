@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author liuke
  * @date 2022/2/24 22:36
  */
-public class Solution_322 {
+public class Solution_322零钱兑换 {
     public int coinChange(int[] coins, int amount) {
         //1. dp[j] 代表 凑成j所需的最小硬币个数
         //2. 公式：dp[j] = Min(dp[j], dp[j - nums[i]])

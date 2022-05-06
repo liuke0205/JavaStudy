@@ -4,7 +4,7 @@ package 动态规划;
  * @author liuke
  * @date 2022/2/16 23:43
  */
-public class Solution_53 {
+public class Solution_53最大子数组和 {
     public int maxSubArray(int[] nums) {
         //base case dp[i] = 0
         //dp[i] 代表nums[0...i]的最大连续子数组
