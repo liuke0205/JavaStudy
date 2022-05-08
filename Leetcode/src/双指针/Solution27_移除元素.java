@@ -5,16 +5,18 @@ package 双指针;
  * @date 2022/3/20 18:43
  */
 public class Solution27_移除元素 {
-    public static void main(String[] args) {
-
-    }
+    /**
+     * 思路：
+     * 1. 维护两个指针，左指针负责赋值，右指针负责和val比较是否一样
+     * 2. 如果相等，那么右指针++；否则，给左指针位置赋值，然后左指针++；
+     */
     public int removeElement(int[] nums, int val) {
-        int slow = 0;
-        for (int fast = 0; fast < nums.length; fast++) {
-            if (nums[fast] != val){
-                nums[slow++] = nums[fast];
+        int i = 0;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != val){
+                nums[i++] = nums[j];
             }
         }
-        return slow;
+        return i;
     }
 }
