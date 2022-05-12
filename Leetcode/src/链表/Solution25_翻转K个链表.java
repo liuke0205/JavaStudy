@@ -6,27 +6,23 @@ package 链表;
  */
 public class Solution25_翻转K个链表 {
     /**
-     * Definition for singly-linked list.
-     * public class ListNode {
-     *     int val;
-     *     ListNode next;
-     *     ListNode() {}
-     *     ListNode(int val) { this.val = val; }
-     *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-     * }
+     * 思路：
+     * 1. 每k个为一组，找出左右边界进行翻转
+     * 2. 如果剩余的不足k个，就不进行翻转
      */
     public ListNode reverseKGroup(ListNode head, int k) {
-        ListNode a = head, b = head;
-        for(int i=0; i<k; i++){
-            if(b == null){
+        ListNode cur = head;
+        for (int i = 0; i < k; i++) {
+            if (cur == null){
                 return head;
             }
-            b = b.next;
+            cur = cur.next;
         }
-        ListNode new_head = reverse(a, b);
-        a.next = reverseKGroup(b, k);
-        return new_head;
+        ListNode newHead = reverse(head, cur);
+        head.next = reverseKGroup(cur, k);
+        return newHead;
     }
+    // 翻转[a, b)区间的链表
     public ListNode reverse(ListNode a, ListNode b){
         ListNode pre = null, head = a;
         while(head != b){
