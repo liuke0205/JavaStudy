@@ -1,3 +1,5 @@
+package 前缀和;
+
 public class Difference {
     // 差分数组
     private int[] diff;
