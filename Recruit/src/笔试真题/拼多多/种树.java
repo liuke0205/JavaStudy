@@ -12,7 +12,6 @@ public class 种树 {
     /**
      * https://www.nowcoder.com/questionTerminal/52f25c8a8d414f8f8fe46d4e62ef732c
      *
-     * @param args
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -26,16 +25,14 @@ public class 种树 {
             map.put(i + 1, arr[i]);
         }
         ArrayList<Integer> res = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            res.add(i + 1);
-            if (dfs(map, len - 1, res)){
-                for (Integer num : res){
-                    System.out.print(num + " ");
-                }
-                return;
-            }
-        }
 
+        if (dfs(map, len, res)){
+            for (Integer num : res){
+                System.out.print(num + " ");
+            }
+            return;
+        }
+        System.out.println("-");
     }
 
     public static boolean dfs(HashMap<Integer, Integer> map, int idx, ArrayList<Integer> res){
@@ -43,7 +40,7 @@ public class 种树 {
             return true;
         }
         for (Integer key : map.keySet()) {
-            if (!key.equals(res.get(res.size() - 1)) && map.get(key) > 0){
+            if (map.get(key) > 0 && (res.isEmpty() || !key.equals(res.get(res.size() - 1)))){
                 map.put(key, map.get(key) - 1);
                 res.add(key);
                 if (dfs(map, idx - 1, res)){

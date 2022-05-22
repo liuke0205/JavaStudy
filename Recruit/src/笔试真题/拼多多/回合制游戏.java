@@ -10,7 +10,6 @@ public class 回合制游戏 {
     /**
      * https://www.nowcoder.com/questionTerminal/17a083854661490e85e5bb6c4b26e546
      *
-     * @param args
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

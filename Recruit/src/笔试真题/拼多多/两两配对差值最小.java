@@ -11,7 +11,6 @@ public class 两两配对差值最小 {
     /**
      * https://www.nowcoder.com/questionTerminal/60594521f1db4d75ad78266b0b35cfbb
      *
-     * @param args
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
