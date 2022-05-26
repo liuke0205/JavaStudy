@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author liuke
  * @date 2022/3/20 23:25
  */
-public class Solution_构造序列 {
+public class 构造序列 {
     /**
      * 给定一个01序列 A 和 一个整数K. 多多有一个构造等长序列B的方法。对于B中的第i个位置的值，可以按照以下方式生成：
      * a. 如果A[i-k] 等于1，其中i>=k，则B[i]的值为1

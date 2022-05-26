@@ -5,7 +5,7 @@ import java.util.Scanner;
  * @author liuke
  * @date 2022/3/20 21:07
  */
-public class Solution_最多能采摘的西瓜 {
+public class 最多能采摘的西瓜 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

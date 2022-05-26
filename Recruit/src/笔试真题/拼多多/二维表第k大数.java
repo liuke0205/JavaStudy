@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author liuke
  * @date 2022/5/21 0:00
  */
-public class Solution_二维表第k大数 {
+public class 二维表第k大数 {
     /**
      * https://www.nowcoder.com/questionTerminal/98929bfe8f6b4beba5838285ae99aa6f
      *
