@@ -1,4 +1,4 @@
-package th11_guosai;
+package guosai;
 
 /**
  * @author liuke
