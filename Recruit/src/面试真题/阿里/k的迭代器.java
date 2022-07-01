@@ -21,7 +21,7 @@ import java.util.PriorityQueue;
  * 1. 你能使用的内存必须和元素的个数无关。即即使元素的个数是无穷多个，你的程序也应该只需要很小的内存就可以运行。
  * 2. 不能对这个类的使用者作假定。比方说不能假定moveNext()和getCurrentElement()一定是成对调用的。
  * */
-public class 阿里实习二面_k的迭代器 {
+public class k的迭代器 {
     public static void main(String[] args) {
 
     }

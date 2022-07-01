@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
  * @author liuke
  * @date 2022/3/15 10:28
  */
-public class 阿里实习一面_第K大的数 {
+public class 第K大的数 {
     public static void main(String[] args) {
 
     }

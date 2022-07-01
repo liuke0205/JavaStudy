@@ -2,7 +2,7 @@ package 面试真题.华为;
 
 import java.util.Scanner;
 
-public class Solution_DNA序列 {
+public class DNA序列 {
     /**
      * 一个DNA序列由A/C/G/T四个字母的排列组合组成。
      * G和C的比例（定义为GC-Ratio）是序列中G和C两个字母的总的出现次数除以总的字母数目（也就是序列长度）。
